@@ -6,11 +6,19 @@
 		},
 		{
 			"keys": "do_hover_tex_png,do_hover_tex_json,do_hover_ske_json,do_tex_png,do_tex_json,do_ske_json,yunlianpai0001_png,re_hover_ske_json,re_hover_tex_json,re_hover_tex_png,re_ske_json,re_tex_json,re_tex_png,mi_hover_ske_json,mi_hover_tex_json,mi_hover_tex_png,mi_ske_json,mi_tex_json,mi_tex_png,flowers_ske_json,yinjie1_png,btn0001_png",
-			"name": "lesson051"
+			"name": "lesson052"
 		},
 		{
 			"keys": "bg053_png,btnleft0001_png,btnright0001_png,caihong1_png,yuepu1_png,yuepu2_png,yuepu3_png",
-			"name": "lesson052"
+			"name": "lesson053"
+		},
+		{
+			"keys": "caodi054_png,fangzi1_png,shou_png,jiantou_png",
+			"name": "lesson054"
+		},
+		{
+			"keys": "yanggao_tex_png,yanggao_tex_json,yanggao_ske_json,girl_tex_png,girl_tex_json,girl_ske_json",
+			"name": "lesson055"
 		}
 	],
 	"resources": [
@@ -683,6 +691,56 @@
 			"url": "assets/053/yuepu3.png",
 			"type": "image",
 			"name": "yuepu3_png"
+		},
+		{
+			"url": "assets/054/caodi.png",
+			"type": "image",
+			"name": "caodi054_png"
+		},
+		{
+			"url": "assets/054/fangzi1.png",
+			"type": "image",
+			"name": "fangzi1_png"
+		},
+		{
+			"url": "assets/054/shou.png",
+			"type": "image",
+			"name": "shou_png"
+		},
+		{
+			"url": "assets/054/jiantou.png",
+			"type": "image",
+			"name": "jiantou_png"
+		},
+		{
+			"url": "assets/055/girl/girl_tex.png",
+			"type": "image",
+			"name": "girl_tex_png"
+		},
+		{
+			"url": "assets/055/yanggao/yanggao_tex.png",
+			"type": "image",
+			"name": "yanggao_tex_png"
+		},
+		{
+			"url": "assets/055/girl/girl_ske.json",
+			"type": "json",
+			"name": "girl_ske_json"
+		},
+		{
+			"url": "assets/055/yanggao/yanggao_ske.json",
+			"type": "json",
+			"name": "yanggao_ske_json"
+		},
+		{
+			"url": "assets/055/girl/girl_tex.json",
+			"type": "json",
+			"name": "girl_tex_json"
+		},
+		{
+			"url": "assets/055/yanggao/yanggao_tex.json",
+			"type": "json",
+			"name": "yanggao_tex_json"
 		}
 	]
 }

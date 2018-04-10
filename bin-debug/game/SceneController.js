@@ -9,6 +9,8 @@ var SceneController = (function () {
         //自己加的场景
         this.Scene051 = new Scene051();
         this.Scene052 = new Scene052();
+        this.Scene053 = new Scene053();
+        this.Scene054 = new Scene054();
     }
     Object.defineProperty(SceneController, "instance", {
         get: function () {
@@ -44,7 +46,7 @@ var SceneController = (function () {
         //加入开始场景
         // stage.addChild( this.instance.startScene );
         // stage.addChild( this.instance.Scene051 );
-        stage.addChild(this.instance.Scene052);
+        stage.addChild(this.instance.Scene054);
     };
     /**
      * 游戏开始（进入游戏场景）
@@ -74,7 +76,7 @@ var SceneController = (function () {
         GameData.elements = GameData.elements.concat();
         // stage.addChild( this.instance.gameScene );
         // stage.addChild(this.instance.Scene051);
-        stage.addChild(this.instance.Scene052);
+        // stage.addChild(this.instance.Scene054);
     };
     /**
      * 游戏开始 （开始游戏）
@@ -136,6 +138,12 @@ var SceneController = (function () {
         if (this.instance.Scene052.parent) {
             stage.removeChild(this.instance.Scene052);
         }
+        if (this.instance.Scene053.parent) {
+            stage.removeChild(this.instance.Scene053);
+        }
+        if (this.instance.Scene054.parent) {
+            stage.removeChild(this.instance.Scene054);
+        }
         stage.addChild(this.instance.Scene051);
     };
     SceneController.Scene052 = function () {
@@ -159,7 +167,71 @@ var SceneController = (function () {
         if (this.instance.Scene052.parent) {
             stage.removeChild(this.instance.Scene052);
         }
+        if (this.instance.Scene053.parent) {
+            stage.removeChild(this.instance.Scene053);
+        }
+        if (this.instance.Scene054.parent) {
+            stage.removeChild(this.instance.Scene054);
+        }
         stage.addChild(this.instance.Scene052);
+    };
+    SceneController.Scene053 = function () {
+        var stage = this.instance._stage;
+        //移除原来的开始场景
+        if (this.instance.startScene.parent) {
+            stage.removeChild(this.instance.startScene);
+            // this.instance.startScene = new StartScene();
+        }
+        if (this.instance.gameScene.parent) {
+            stage.removeChild(this.instance.gameScene);
+            // this.instance.gameScene = new GameScene();
+        }
+        if (this.instance.overScene.parent) {
+            stage.removeChild(this.instance.overScene);
+            // this.instance.overScene = new OverScene();
+        }
+        if (this.instance.Scene051.parent) {
+            stage.removeChild(this.instance.Scene051);
+        }
+        if (this.instance.Scene052.parent) {
+            stage.removeChild(this.instance.Scene052);
+        }
+        if (this.instance.Scene053.parent) {
+            stage.removeChild(this.instance.Scene053);
+        }
+        if (this.instance.Scene054.parent) {
+            stage.removeChild(this.instance.Scene054);
+        }
+        stage.addChild(this.instance.Scene053);
+    };
+    SceneController.Scene054 = function () {
+        var stage = this.instance._stage;
+        //移除原来的开始场景
+        if (this.instance.startScene.parent) {
+            stage.removeChild(this.instance.startScene);
+            // this.instance.startScene = new StartScene();
+        }
+        if (this.instance.gameScene.parent) {
+            stage.removeChild(this.instance.gameScene);
+            // this.instance.gameScene = new GameScene();
+        }
+        if (this.instance.overScene.parent) {
+            stage.removeChild(this.instance.overScene);
+            // this.instance.overScene = new OverScene();
+        }
+        if (this.instance.Scene051.parent) {
+            stage.removeChild(this.instance.Scene051);
+        }
+        if (this.instance.Scene052.parent) {
+            stage.removeChild(this.instance.Scene052);
+        }
+        if (this.instance.Scene053.parent) {
+            stage.removeChild(this.instance.Scene053);
+        }
+        if (this.instance.Scene054.parent) {
+            stage.removeChild(this.instance.Scene054);
+        }
+        stage.addChild(this.instance.Scene054);
     };
     return SceneController;
 }());

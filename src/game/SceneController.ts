@@ -14,6 +14,8 @@ class SceneController {
 	private overScene:OverScene;
 	private Scene051:Scene051;
 	private Scene052:Scene052;
+	private Scene053:Scene053;
+	private Scene054:Scene054;
 	public constructor() {
 		this.startScene = new StartScene();
 		this.gameScene = new GameScene();
@@ -21,6 +23,8 @@ class SceneController {
 		//自己加的场景
 		this.Scene051 = new Scene051();
 		this.Scene052 = new Scene052();
+		this.Scene053 = new Scene053();
+		this.Scene054 = new Scene054();
 	}
 	static sceneController:SceneController; //类本身可以嵌套
 	static get instance(){ // get 是TS的类获取方法？ SceneController.instance 应该是给instance的get方法 因为在TS中类需要先实例化
@@ -55,7 +59,7 @@ class SceneController {
 		//加入开始场景
 		// stage.addChild( this.instance.startScene );
 		// stage.addChild( this.instance.Scene051 );
-		stage.addChild(this.instance.Scene052);
+		stage.addChild(this.instance.Scene054);
 	}
 	/**
 	 * 游戏开始（进入游戏场景）
@@ -86,7 +90,7 @@ class SceneController {
 		GameData.elements = GameData.elements.concat();
 		// stage.addChild( this.instance.gameScene );
 		// stage.addChild(this.instance.Scene051);
-		stage.addChild(this.instance.Scene052);
+		// stage.addChild(this.instance.Scene054);
 	}
 
 	/**
@@ -153,6 +157,12 @@ class SceneController {
 		if(this.instance.Scene052.parent){
 			stage.removeChild(this.instance.Scene052);
 		}
+		if(this.instance.Scene053.parent){
+			stage.removeChild(this.instance.Scene053);
+		}
+		if(this.instance.Scene054.parent){
+			stage.removeChild(this.instance.Scene054);
+		}
 		stage.addChild( this.instance.Scene051 );
 	}
 
@@ -177,7 +187,73 @@ class SceneController {
 		if(this.instance.Scene052.parent){
 			stage.removeChild(this.instance.Scene052);
 		}
+		if(this.instance.Scene053.parent){
+			stage.removeChild(this.instance.Scene053);
+		}
+		if(this.instance.Scene054.parent){
+			stage.removeChild(this.instance.Scene054);
+		}
 		stage.addChild( this.instance.Scene052 );
+	}
+
+	static Scene053(){
+		let stage:egret.DisplayObjectContainer = this.instance._stage;
+		//移除原来的开始场景
+		if(this.instance.startScene.parent){
+			stage.removeChild( this.instance.startScene );
+			// this.instance.startScene = new StartScene();
+		}
+		if(this.instance.gameScene.parent){
+			stage.removeChild( this.instance.gameScene );
+			// this.instance.gameScene = new GameScene();
+		}
+		if(this.instance.overScene.parent){
+			stage.removeChild( this.instance.overScene );
+			// this.instance.overScene = new OverScene();
+		}
+		if(this.instance.Scene051.parent){
+			stage.removeChild(this.instance.Scene051);
+		}
+		if(this.instance.Scene052.parent){
+			stage.removeChild(this.instance.Scene052);
+		}
+		if(this.instance.Scene053.parent){
+			stage.removeChild(this.instance.Scene053);
+		}
+		if(this.instance.Scene054.parent){
+			stage.removeChild(this.instance.Scene054);
+		}
+		stage.addChild( this.instance.Scene053 );
+	}
+
+	static Scene054(){
+		let stage:egret.DisplayObjectContainer = this.instance._stage;
+		//移除原来的开始场景
+		if(this.instance.startScene.parent){
+			stage.removeChild( this.instance.startScene );
+			// this.instance.startScene = new StartScene();
+		}
+		if(this.instance.gameScene.parent){
+			stage.removeChild( this.instance.gameScene );
+			// this.instance.gameScene = new GameScene();
+		}
+		if(this.instance.overScene.parent){
+			stage.removeChild( this.instance.overScene );
+			// this.instance.overScene = new OverScene();
+		}
+		if(this.instance.Scene051.parent){
+			stage.removeChild(this.instance.Scene051);
+		}
+		if(this.instance.Scene052.parent){
+			stage.removeChild(this.instance.Scene052);
+		}
+		if(this.instance.Scene053.parent){
+			stage.removeChild(this.instance.Scene053);
+		}
+		if(this.instance.Scene054.parent){
+			stage.removeChild(this.instance.Scene054);
+		}
+		stage.addChild( this.instance.Scene054 );
 	}
 
 }
