@@ -51,6 +51,7 @@ var Scene051 = (function (_super) {
         // this.addEventListener( egret.Event.ADDED_TO_STAGE,this.runGame,this);
         _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.initView, _this);
         console.log('scene051');
+        SceneController.refresh("051");
         return _this;
     }
     Scene051.prototype.runGame = function () {
@@ -202,18 +203,18 @@ var Scene051 = (function (_super) {
         this._flowers.scaleX = this.stage.stageWidth / this._flowers.width * 1.1;
         this._flowers.scaleY = this.stage.stageHeight / this._flowers.height * .55;
         // console.log(this._flowers.scaleX ,this._flowers.scaleY );
-        this._btn = GameUtil.createBitmapByName("btn0001_png");
-        this._btn.x = this.stage.stageWidth * .85;
-        this._btn.y = this.stage.stageHeight * .75;
-        this._btn.scaleX = this._btn.scaleY = this.stage.stageWidth / this._btn.width * .1;
-        this.addChild(this._btn);
+        this._btnright = GameUtil.createBitmapByName("btn0001_png");
+        this._btnright.x = this.stage.stageWidth * .85;
+        this._btnright.y = this.stage.stageHeight * .75;
+        this._btnright.scaleX = this._btnright.scaleY = this.stage.stageWidth / this._btnright.width * .1;
+        this.addChild(this._btnright);
         this.stage.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.touchHandler, this);
         // let bear = this.createdonghua("bear");
         // bear.x = this.stage.stageWidth / 3;
         // bear.y = this.stage.stageHeight * .8;
         // bear.scaleX = 2;
         // bear.scaleY = 2;
-        egret.startTick(this.onTicker, this);
+        // egret.startTick(this.onTicker, this);
         // 需要注意的是，startTick函数的参数，第一个参数即它的回调函数，要求有返回值，如果返回为true将在回调函数执行完成之后立即重绘，为false则不会重绘。另一个参数是this对象，通常传入this即可。
     };
     Scene051.prototype.onTimeUpdate = function () {
@@ -252,15 +253,17 @@ var Scene051 = (function (_super) {
         // }
     };
     Scene051.prototype.checkCollision = function (stageX, stageY) {
-        if (this._btn.hitTestPoint(stageX, stageY)) {
-            var height = this.stage.stageHeight * .9;
+        var Scene = this;
+        if (this._btnright.hitTestPoint(stageX, stageY)) {
+            // let height = this.stage.stageHeight * .9;
             // console.log(egret.Tween.get(this._yun2), height);
             // let yun2 = egret.Tween.get(this._yun2);
-            egret.Tween.get(this._caodi).to({ y: this.stage.stageHeight }, 1000);
-            egret.Tween.removeTweens(this._yun2);
-            egret.Tween.get(this._yun2).to({ y: this.stage.stageHeight }, 1000).call(function () {
-                SceneController.Scene052();
-            });
+            // egret.Tween.get(this._caodi).to({y:this.stage.stageHeight},1000);
+            // egret.Tween.removeTweens(this._yun2);
+            // egret.Tween.get(this._yun2).to({y:this.stage.stageHeight},1000).call(()=>{
+            // 	SceneController.Scene052(Scene);
+            SceneController.jumpr(Scene);
+            // });
         }
         /*** 本示例关键代码段开始 ***/
         var doResult = this._do.hitTestPoint(stageX, stageY);

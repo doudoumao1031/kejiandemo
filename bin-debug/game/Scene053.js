@@ -53,7 +53,8 @@ var Scene053 = (function (_super) {
         _this._distance = new egret.Point();
         // this.addEventListener( egret.Event.ADDED_TO_STAGE,this.runGame,this);
         _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.initView, _this);
-        console.log('scene051');
+        console.log('scene053');
+        SceneController.refresh("053");
         return _this;
     }
     Scene053.prototype.runGame = function () {
@@ -104,10 +105,13 @@ var Scene053 = (function (_super) {
         this._yunleft.height = stageWidth * .3 * 0.442;
         this._yunleft.x = -this._yunleft.width;
         this._yunleft.y = this.stage.stageHeight * .3;
-        egret.Tween.get(this._yunleft).to({ x: stageWidth * -0.15 }, 1500).set({ x: this.stage.stageWidth * -0.15 }).call(function () {
-            var yunX = _this._yunleft.x;
-            egret.Tween.get(_this._yunleft, { loop: true }).to({ x: _this.stage.stageWidth }, 15000).wait(2000).set({ x: stageWidth * -0.15 });
-        });
+        var dangqianScene = this;
+        if (this._yunleft) {
+            egret.Tween.get(dangqianScene._yunleft).to({ x: stageWidth * -0.15 }, 1500).set({ x: dangqianScene.stage.stageWidth * -0.15 }).call(function () {
+                var yunX = dangqianScene._yunleft.x;
+                // egret.Tween.get(dangqianScene._yunleft, {loop:true}).to({x:dangqianScene.stage.stageWidth},15000).wait(2000).set({x:stageWidth * -0.15});
+            });
+        }
         // let yun2:egret.Bitmap = GameUtil.createBitmapByName("yunlianpai0001_png");
         // this.addChild(yun2);
         // yun2.width = stageWidth*0.5;
@@ -236,11 +240,13 @@ var Scene053 = (function (_super) {
         this._bear.y = this.stage.stageHeight * .7;
         this._bear.scaleX = 4 * 5 / 4;
         this._bear.scaleY = 4 * 5 / 4;
+        var dangqianstage = this.stage;
         egret.Tween.get(this._bear).to({ x: this.stage.stageWidth * .2 }, 1000).call(function () {
             _this.removeChild(_this._bear);
             _this._bear = _this.createdonghua("bear");
-            _this._bear.x = _this.stage.stageWidth * .2;
-            _this._bear.y = _this.stage.stageHeight * .7;
+            // console.log(this.stage);
+            _this._bear.x = dangqianstage.stageWidth * .2;
+            _this._bear.y = dangqianstage.stageHeight * .7;
             _this._bear.scaleX = 2 * 5 / 4;
             _this._bear.scaleY = 2 * 5 / 4;
             _this.addChild(_this._bear);
@@ -256,7 +262,7 @@ var Scene053 = (function (_super) {
         // bear.y = this.stage.stageHeight * .8;
         // bear.scaleX = 2;
         // bear.scaleY = 2;
-        egret.startTick(this.onTicker, this);
+        // egret.startTick(this.onTicker, this);
         // 需要注意的是，startTick函数的参数，第一个参数即它的回调函数，要求有返回值，如果返回为true将在回调函数执行完成之后立即重绘，为false则不会重绘。另一个参数是this对象，通常传入this即可。
         // 拖拽实现
         this._do.touchEnabled = true;
@@ -311,17 +317,17 @@ var Scene053 = (function (_super) {
         // egret.Tween.get(this._caihong).to({y:0+this.stage.stageHeight},1000)
         // egret.Tween.get(this._caihong).to({y:0},1000)
         console.log('舞台高度', this._caihong.height);
-        egret.Tween.get(this._do).to({ x: this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 1 / 3 }, 1000);
-        egret.Tween.get(this._re).to({ x: this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 2 / 3 }, 1000);
-        egret.Tween.get(this._mi).to({ x: this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 3 / 3 }, 1000);
-        egret.Tween.get(this._caihong).to({ y: this.stage.stageHeight + this._caihong.height }, 1000);
-        egret.Tween.get(this._yun2).to({ y: this.stage.stageHeight + this._yun2.height }, 1000);
-        egret.Tween.get(this._yunleft).to({ x: -this._yunleft.width }, 1000);
-        egret.Tween.get(this._yunright).to({ x: this.stage.stageWidth + this._yunright.width }, 1000)
-            .call(function () {
-            // this.stage.removeEventListener( egret.TouchEvent.TOUCH_BEGIN, this.touchHandler, this );
-            SceneController.Scene051();
-        });
+        // egret.Tween.get(this._do).to({x:this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 1/3},1000)
+        // egret.Tween.get(this._re).to({x:this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 2/3},1000)
+        // egret.Tween.get(this._mi).to({x:this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 3/3},1000)
+        // egret.Tween.get(this._caihong).to({y:this.stage.stageHeight+this._caihong.height},1000)
+        // egret.Tween.get(this._yun2).to({y:this.stage.stageHeight+this._yun2.height},1000)
+        // egret.Tween.get(this._yunleft).to({x:-this._yunleft.width},1000)
+        // egret.Tween.get(this._yunright).to({x:this.stage.stageWidth+this._yunright.width},1000)
+        // .call(()=>{
+        // this.stage.removeEventListener( egret.TouchEvent.TOUCH_BEGIN, this.touchHandler, this );
+        SceneController.jumpl(this);
+        // })
     };
     return Scene053;
 }(CommonScene));

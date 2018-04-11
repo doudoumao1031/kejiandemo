@@ -11,15 +11,13 @@
 	"game": [
 		"bin-debug/game/CommonScene.js",
 		"bin-debug/gameObject/GameObject.js",
-		"bin-debug/game/Scene052.js",
+		"bin-debug/game/Scene053.js",
 		"bin-debug/common/GameUtil.js",
 		"bin-debug/LoadingUI.js",
 		"bin-debug/game/demo.js",
-		"bin-debug/game/GameScene.js",
-		"bin-debug/game/OverScene.js",
 		"bin-debug/game/Scene051.js",
-		"bin-debug/Main.js",
-		"bin-debug/game/Scene053.js",
+		"bin-debug/game/Scene052.js",
+		"bin-debug/gameObject/Player.js",
 		"bin-debug/game/Scene054.js",
 		"bin-debug/game/SceneController.js",
 		"bin-debug/game/StartScene.js",
@@ -27,6 +25,6 @@
 		"bin-debug/gameObject/Barrier.js",
 		"bin-debug/gameObject/Egg.js",
 		"bin-debug/Platform.js",
-		"bin-debug/gameObject/Player.js"
+		"bin-debug/Main.js"
 	]
 }

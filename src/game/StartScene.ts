@@ -3,6 +3,9 @@ class StartScene extends CommonScene{
 	public constructor() {
 		super();
 		this.addEventListener( egret.Event.ADDED_TO_STAGE,this.initView,this);
+		console.log('scene050');
+		SceneController.refresh("050");
+		
 	}
 
 	private _soundchannel:egret.SoundChannel;
@@ -10,7 +13,9 @@ class StartScene extends CommonScene{
 	private _bear;
 
 	private initView(){
-
+		this.stage.setContentSize (3840,2160); 
+		console.log("舞台宽高",this.stage.stageWidth,this.stage.stageHeight);
+		let Scene = this;
 		// 音效
 		let sound:egret.Sound = RES.getRes("streamsound 0_mp3");
 		this._soundchannel = sound.play(0,1);
@@ -56,7 +61,7 @@ class StartScene extends CommonScene{
 			this._bear.scaleY = 4 * 5/4;
 			egret.Tween.get( this._bear ).to( {x:this.stage.stageWidth}, 3000 ).call(()=>{
 				this.removeChild(this._bear);
-				SceneController.Scene051();
+				SceneController.jumpr(Scene);
 			});
 			egret.Tween.get( startBtn ).to( {scaleX:5,scaleY:5,alpha:.3}, 1500, egret.Ease.sineIn ).call(()=>{
 				this.removeChild(startBtn);
@@ -124,17 +129,23 @@ class StartScene extends CommonScene{
 		// this._zuiba.scaleX = this._zuiba.scaleY = 3;
 
 		this._bear = this.createdonghua("bearmove");
-		this._bear.x = 0 - this._bear.width/2;
-		this._bear.y = this.stage.stageHeight * .8;
 		this._bear.scaleX = 4 * 5/4;
 		this._bear.scaleY = 4 * 5/4;
+		// this._bear.scaleX = this.stage.stageWidth / this._bear.width * .14;
+		// this._bear.scaleY = this._bear.scaleX * 1.05;
+		this._bear.x = 0 - this._bear.width/2;
+		this._bear.y = this.stage.stageHeight * .75;
 		egret.Tween.get( this._bear ).to( {x:this.stage.stageWidth * .33}, 1500 ).call(()=>{
 			this.removeChild(this._bear);
 			this._bear = this.createdonghua("bear");
-			this._bear.x = this.stage.stageWidth * .33;
-			this._bear.y = this.stage.stageHeight * .8;
 			this._bear.scaleX = 2 * 5/4;
 			this._bear.scaleY = 2 * 5/4;
+			// this._bear.scaleX = this.stage.stageWidth / this._bear.width * .20;
+			// this._bear.scaleY = this._bear.scaleX * 1.05;
+			this._bear.x = this.stage.stageWidth * .33;
+			this._bear.y = this.stage.stageHeight * .75;
+			// this._bear.width = this.stage.stageWidth * .2;
+			// this._bear.height = this._bear.width * 1.05;
 			this.addChild(this._bear);
 			// 走完后添加嘴巴
 			this._zuiba = this.createdonghua("zuiba");

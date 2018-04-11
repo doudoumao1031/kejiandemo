@@ -14,10 +14,15 @@ var StartScene = (function (_super) {
     function StartScene() {
         var _this = _super.call(this) || this;
         _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.initView, _this);
+        console.log('scene050');
+        SceneController.refresh("050");
         return _this;
     }
     StartScene.prototype.initView = function () {
         var _this = this;
+        this.stage.setContentSize(3840, 2160);
+        console.log("舞台宽高", this.stage.stageWidth, this.stage.stageHeight);
+        var Scene = this;
         // 音效
         var sound = RES.getRes("streamsound 0_mp3");
         this._soundchannel = sound.play(0, 1);
@@ -61,7 +66,7 @@ var StartScene = (function (_super) {
             _this._bear.scaleY = 4 * 5 / 4;
             egret.Tween.get(_this._bear).to({ x: _this.stage.stageWidth }, 3000).call(function () {
                 _this.removeChild(_this._bear);
-                SceneController.Scene051();
+                SceneController.jumpr(Scene);
             });
             egret.Tween.get(startBtn).to({ scaleX: 5, scaleY: 5, alpha: .3 }, 1500, egret.Ease.sineIn).call(function () {
                 _this.removeChild(startBtn);
@@ -114,17 +119,23 @@ var StartScene = (function (_super) {
         // this._zuiba.y = this._bear.y - this._zuiba.height * .8;
         // this._zuiba.scaleX = this._zuiba.scaleY = 3;
         this._bear = this.createdonghua("bearmove");
-        this._bear.x = 0 - this._bear.width / 2;
-        this._bear.y = this.stage.stageHeight * .8;
         this._bear.scaleX = 4 * 5 / 4;
         this._bear.scaleY = 4 * 5 / 4;
+        // this._bear.scaleX = this.stage.stageWidth / this._bear.width * .14;
+        // this._bear.scaleY = this._bear.scaleX * 1.05;
+        this._bear.x = 0 - this._bear.width / 2;
+        this._bear.y = this.stage.stageHeight * .75;
         egret.Tween.get(this._bear).to({ x: this.stage.stageWidth * .33 }, 1500).call(function () {
             _this.removeChild(_this._bear);
             _this._bear = _this.createdonghua("bear");
-            _this._bear.x = _this.stage.stageWidth * .33;
-            _this._bear.y = _this.stage.stageHeight * .8;
             _this._bear.scaleX = 2 * 5 / 4;
             _this._bear.scaleY = 2 * 5 / 4;
+            // this._bear.scaleX = this.stage.stageWidth / this._bear.width * .20;
+            // this._bear.scaleY = this._bear.scaleX * 1.05;
+            _this._bear.x = _this.stage.stageWidth * .33;
+            _this._bear.y = _this.stage.stageHeight * .75;
+            // this._bear.width = this.stage.stageWidth * .2;
+            // this._bear.height = this._bear.width * 1.05;
             _this.addChild(_this._bear);
             // 走完后添加嘴巴
             _this._zuiba = _this.createdonghua("zuiba");

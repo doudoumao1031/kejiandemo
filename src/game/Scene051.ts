@@ -5,6 +5,7 @@ class Scene051 extends CommonScene{
 		// this.addEventListener( egret.Event.ADDED_TO_STAGE,this.runGame,this);
 		this.addEventListener( egret.Event.ADDED_TO_STAGE,this.initView,this);
         console.log('scene051');
+		SceneController.refresh("051");
 	}
 
 	private async runGame() {
@@ -41,7 +42,7 @@ class Scene051 extends CommonScene{
 	private _flowers;
 	private _yuepu;
 	private _text:egret.TextField;
-	private _btn;
+	private _btnright;
 	private _yun2;
 	private _caodi;
 
@@ -201,11 +202,11 @@ class Scene051 extends CommonScene{
 		this._flowers.scaleY = this.stage.stageHeight / this._flowers.height * .55;
 		// console.log(this._flowers.scaleX ,this._flowers.scaleY );
 
-		this._btn = GameUtil.createBitmapByName("btn0001_png"); 
-		this._btn.x = this.stage.stageWidth * .85;
-		this._btn.y = this.stage.stageHeight * .75;
-		this._btn.scaleX = this._btn.scaleY = this.stage.stageWidth / this._btn.width * .1;
-		this.addChild(this._btn);
+		this._btnright = GameUtil.createBitmapByName("btn0001_png"); 
+		this._btnright.x = this.stage.stageWidth * .85;
+		this._btnright.y = this.stage.stageHeight * .75;
+		this._btnright.scaleX = this._btnright.scaleY = this.stage.stageWidth / this._btnright.width * .1;
+		this.addChild(this._btnright);
 
 		this.stage.addEventListener( egret.TouchEvent.TOUCH_BEGIN, this.touchHandler, this );
 
@@ -216,7 +217,7 @@ class Scene051 extends CommonScene{
 		// bear.scaleX = 2;
 		// bear.scaleY = 2;
 
-		egret.startTick(this.onTicker, this);
+		// egret.startTick(this.onTicker, this);
 		// 需要注意的是，startTick函数的参数，第一个参数即它的回调函数，要求有返回值，如果返回为true将在回调函数执行完成之后立即重绘，为false则不会重绘。另一个参数是this对象，通常传入this即可。
 
 	}
@@ -256,16 +257,17 @@ class Scene051 extends CommonScene{
         // }
     }
 	private checkCollision( stageX:number, stageY:number ):void {
-
-		if(this._btn.hitTestPoint( stageX, stageY )){
-			let height = this.stage.stageHeight * .9;
+		let Scene = this;
+		if(this._btnright.hitTestPoint( stageX, stageY )){
+			// let height = this.stage.stageHeight * .9;
 			// console.log(egret.Tween.get(this._yun2), height);
 			// let yun2 = egret.Tween.get(this._yun2);
-			egret.Tween.get(this._caodi).to({y:this.stage.stageHeight},1000);
-			egret.Tween.removeTweens(this._yun2);
-			egret.Tween.get(this._yun2).to({y:this.stage.stageHeight},1000).call(()=>{
-				SceneController.Scene052();
-			});
+			// egret.Tween.get(this._caodi).to({y:this.stage.stageHeight},1000);
+			// egret.Tween.removeTweens(this._yun2);
+			// egret.Tween.get(this._yun2).to({y:this.stage.stageHeight},1000).call(()=>{
+			// 	SceneController.Scene052(Scene);
+			SceneController.jumpr(Scene);
+			// });
 		}
 
         /*** 本示例关键代码段开始 ***/

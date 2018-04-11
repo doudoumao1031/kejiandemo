@@ -71,7 +71,7 @@ class Player extends GameObject{
 
 		if((this.y + this._role.height)>GameData.groundHeight){
 			this.death(true);
-			SceneController.GameEnd();
+			// SceneController.GameEnd();
 			console.log("游戏结束");
 		}
 	}

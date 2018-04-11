@@ -4,7 +4,8 @@ class Scene053 extends CommonScene{
 		super();
 		// this.addEventListener( egret.Event.ADDED_TO_STAGE,this.runGame,this);
 		this.addEventListener( egret.Event.ADDED_TO_STAGE,this.initView,this);
-        console.log('scene051');
+        console.log('scene053');
+		SceneController.refresh("053");
 	}
 
 	private async runGame() {
@@ -99,10 +100,13 @@ class Scene053 extends CommonScene{
 		this._yunleft.height = stageWidth * .3 * 0.442;
 		this._yunleft.x = -this._yunleft.width;
 		this._yunleft.y = this.stage.stageHeight * .3;
-		egret.Tween.get(this._yunleft).to({x:stageWidth * -0.15},1500).set({x:this.stage.stageWidth * -0.15}).call(()=>{
-			let yunX = this._yunleft.x;
-			egret.Tween.get(this._yunleft, {loop:true}).to({x:this.stage.stageWidth},15000).wait(2000).set({x:stageWidth * -0.15});
-		})
+		let dangqianScene = this;
+		if(this._yunleft){
+			egret.Tween.get(dangqianScene._yunleft).to({x:stageWidth * -0.15},1500).set({x:dangqianScene.stage.stageWidth * -0.15}).call(()=>{
+				let yunX = dangqianScene._yunleft.x;
+				// egret.Tween.get(dangqianScene._yunleft, {loop:true}).to({x:dangqianScene.stage.stageWidth},15000).wait(2000).set({x:stageWidth * -0.15});
+			})
+		}
 		
 
 
@@ -256,11 +260,13 @@ class Scene053 extends CommonScene{
 		this._bear.y = this.stage.stageHeight * .7;
 		this._bear.scaleX = 4 * 5/4;
 		this._bear.scaleY = 4 * 5/4;
+		let dangqianstage = this.stage;
 		egret.Tween.get( this._bear ).to( {x:this.stage.stageWidth * .2}, 1000 ).call(()=>{
 			this.removeChild(this._bear);
 			this._bear = this.createdonghua("bear");
-			this._bear.x = this.stage.stageWidth * .2;
-			this._bear.y = this.stage.stageHeight * .7;
+			// console.log(this.stage);
+			this._bear.x = dangqianstage.stageWidth * .2;
+			this._bear.y = dangqianstage.stageHeight * .7;
 			this._bear.scaleX = 2 * 5/4;
 			this._bear.scaleY = 2 * 5/4;
 			this.addChild(this._bear);
@@ -280,7 +286,7 @@ class Scene053 extends CommonScene{
 		// bear.scaleX = 2;
 		// bear.scaleY = 2;
 
-		egret.startTick(this.onTicker, this);
+		// egret.startTick(this.onTicker, this);
 		// 需要注意的是，startTick函数的参数，第一个参数即它的回调函数，要求有返回值，如果返回为true将在回调函数执行完成之后立即重绘，为false则不会重绘。另一个参数是this对象，通常传入this即可。
 
 		// 拖拽实现
@@ -352,17 +358,17 @@ class Scene053 extends CommonScene{
 		// egret.Tween.get(this._caihong).to({y:0+this.stage.stageHeight},1000)
 		// egret.Tween.get(this._caihong).to({y:0},1000)
 		console.log('舞台高度',this._caihong.height);
-		egret.Tween.get(this._do).to({x:this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 1/3},1000)
-		egret.Tween.get(this._re).to({x:this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 2/3},1000)
-		egret.Tween.get(this._mi).to({x:this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 3/3},1000)
-		egret.Tween.get(this._caihong).to({y:this.stage.stageHeight+this._caihong.height},1000)
-		egret.Tween.get(this._yun2).to({y:this.stage.stageHeight+this._yun2.height},1000)
-		egret.Tween.get(this._yunleft).to({x:-this._yunleft.width},1000)
-		egret.Tween.get(this._yunright).to({x:this.stage.stageWidth+this._yunright.width},1000)
-		.call(()=>{
+		// egret.Tween.get(this._do).to({x:this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 1/3},1000)
+		// egret.Tween.get(this._re).to({x:this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 2/3},1000)
+		// egret.Tween.get(this._mi).to({x:this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 3/3},1000)
+		// egret.Tween.get(this._caihong).to({y:this.stage.stageHeight+this._caihong.height},1000)
+		// egret.Tween.get(this._yun2).to({y:this.stage.stageHeight+this._yun2.height},1000)
+		// egret.Tween.get(this._yunleft).to({x:-this._yunleft.width},1000)
+		// egret.Tween.get(this._yunright).to({x:this.stage.stageWidth+this._yunright.width},1000)
+		// .call(()=>{
 			// this.stage.removeEventListener( egret.TouchEvent.TOUCH_BEGIN, this.touchHandler, this );
-			SceneController.Scene051();
-		})
+			SceneController.jumpl(this);
+		// })
 	}
 	
 
