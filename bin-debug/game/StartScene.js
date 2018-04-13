@@ -61,9 +61,9 @@ var StartScene = (function (_super) {
             }
             _this._bear = _this.createdonghua("bearmove");
             _this._bear.x = _this.stage.stageWidth / 3;
-            _this._bear.y = _this.stage.stageHeight * .8;
-            _this._bear.scaleX = 4 * 5 / 4;
-            _this._bear.scaleY = 4 * 5 / 4;
+            _this._bear.y = _this.stage.stageHeight * .75;
+            _this._bear.scaleX = 4 * 7 / 4;
+            _this._bear.scaleY = 4 * 7 / 4;
             egret.Tween.get(_this._bear).to({ x: _this.stage.stageWidth }, 3000).call(function () {
                 _this.removeChild(_this._bear);
                 SceneController.jumpr(Scene);
@@ -119,8 +119,8 @@ var StartScene = (function (_super) {
         // this._zuiba.y = this._bear.y - this._zuiba.height * .8;
         // this._zuiba.scaleX = this._zuiba.scaleY = 3;
         this._bear = this.createdonghua("bearmove");
-        this._bear.scaleX = 4 * 5 / 4;
-        this._bear.scaleY = 4 * 5 / 4;
+        this._bear.scaleX = 4 * 7 / 4;
+        this._bear.scaleY = 4 * 7 / 4;
         // this._bear.scaleX = this.stage.stageWidth / this._bear.width * .14;
         // this._bear.scaleY = this._bear.scaleX * 1.05;
         this._bear.x = 0 - this._bear.width / 2;
@@ -128,8 +128,8 @@ var StartScene = (function (_super) {
         egret.Tween.get(this._bear).to({ x: this.stage.stageWidth * .33 }, 1500).call(function () {
             _this.removeChild(_this._bear);
             _this._bear = _this.createdonghua("bear");
-            _this._bear.scaleX = 2 * 5 / 4;
-            _this._bear.scaleY = 2 * 5 / 4;
+            _this._bear.scaleX = 2 * 7 / 4;
+            _this._bear.scaleY = 2 * 7 / 4;
             // this._bear.scaleX = this.stage.stageWidth / this._bear.width * .20;
             // this._bear.scaleY = this._bear.scaleX * 1.05;
             _this._bear.x = _this.stage.stageWidth * .33;
@@ -139,9 +139,9 @@ var StartScene = (function (_super) {
             _this.addChild(_this._bear);
             // 走完后添加嘴巴
             _this._zuiba = _this.createdonghua("zuiba");
-            _this._zuiba.x = _this._bear.x - _this._zuiba.width * 3;
+            _this._zuiba.x = _this._bear.x - _this._zuiba.width * 5;
             _this._zuiba.y = _this._bear.y - _this._zuiba.height * .8;
-            _this._zuiba.scaleX = _this._zuiba.scaleY = 3;
+            _this._zuiba.scaleX = _this._zuiba.scaleY = 4;
         });
         this.addjiaoyin(); // 该方法依赖于 this._bear所以需要放在后面
         egret.startTick(this.onTicker, this);
@@ -196,9 +196,9 @@ var StartScene = (function (_super) {
     };
     StartScene.prototype.getjiaoyin = function (distance, name, sideleft) {
         var getjiaoyin = GameUtil.createBitmapByName(name);
-        getjiaoyin.y = this.stage.stageHeight * .8 + this._bear.height / 2 + (sideleft ? -getjiaoyin.height : getjiaoyin.height);
-        getjiaoyin.x = this.stage.stageWidth * distance - this._bear.width / 2;
-        getjiaoyin.scaleX = getjiaoyin.scaleY = 2;
+        getjiaoyin.y = this.stage.stageHeight * .85 + this._bear.height / 2 + (sideleft ? -getjiaoyin.height : getjiaoyin.height);
+        getjiaoyin.x = this.stage.stageWidth * distance - this._bear.width * 3 / 4;
+        getjiaoyin.scaleX = getjiaoyin.scaleY = 3;
         return getjiaoyin;
     };
     return StartScene;

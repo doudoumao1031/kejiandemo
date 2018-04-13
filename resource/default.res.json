@@ -1,11 +1,11 @@
 {
 	"groups": [
 		{
-			"keys": "config_json,bear_ske_json,bear_tex_png,caodi_tex_json,caodi_ske_json,caodi_tex_png,bear_tex_json,button0001_png,bearmove_ske_json,bearmove_tex_png,dashu_tex_json,dashu_ske_json,dashu_tex_png,bearmove_tex_json,sky_png,yun_png,mogu_tex_png,mogu_tex_json,mogu_ske_json,cao051_png,streamsound 0_mp3,zuiba_tex_png,zuiba_tex_json,zuiba_ske_json,jiaoyinleft_png,jiaoyinright_png,yunlianpai00012_png,do_ske2_json,do_tex2_json,do_tex2_png,do_hover_ske2_json,do_hover_tex2_json,do_hover_tex2_png,mi_ske2_json,mi_tex2_json,mi_tex2_png,mi_hover_ske2_json,mi_hover_tex2_json,mi_hover_tex2_png,re_ske2_json,re_tex2_json,re_tex2_png,re_hover_ske2_json,re_hover_tex2_json,re_hover_tex2_png,yunlianpai00013_png,do_ske3_json,do_tex3_json,do_tex3_png,do_hover_ske3_json,do_hover_tex3_json,do_hover_tex3_png,flowers_tex3_json,flowers_tex3_png,mi_ske3_json,mi_tex3_json,mi_tex3_png,mi_hover_ske3_json,mi_hover_tex3_json,mi_hover_tex3_png,re_ske3_json,re_tex3_json,re_tex3_png,re_hover_ske3_json,re_hover_tex3_json,re_hover_tex3_png,yunlianpai00014_png,do_ske4_json,do_tex4_json,do_tex4_png,do_hover_ske4_json,do_hover_tex4_json,do_hover_tex4_png,flowers_ske2_json,flowers_tex_json,flowers_tex_png,mi_ske4_json,mi_tex4_json,mi_tex4_png,mi_hover_ske4_json,mi_hover_tex4_json,mi_hover_tex4_png,re_ske4_json,re_tex4_json,re_tex4_png,re_hover_ske4_json,re_hover_tex4_json,re_hover_tex4_png",
+			"keys": "config_json,bear_ske_json,bear_tex_png,caodi_tex_json,caodi_ske_json,caodi_tex_png,bear_tex_json,button0001_png,bearmove_ske_json,bearmove_tex_png,dashu_tex_json,dashu_ske_json,dashu_tex_png,bearmove_tex_json,sky_png,yun_png,mogu_tex_png,mogu_tex_json,mogu_ske_json,cao051_png,streamsound 0_mp3,zuiba_tex_png,zuiba_tex_json,zuiba_ske_json,jiaoyinleft_png,jiaoyinright_png,yunlianpai00012_png,yunlianpai00013_png,flowers_tex3_json,flowers_tex3_png,yunlianpai00014_png,flowers_ske2_json,flowers_tex_json,flowers_tex_png",
 			"name": "preload"
 		},
 		{
-			"keys": "do_hover_tex_png,do_hover_tex_json,do_hover_ske_json,do_tex_png,do_tex_json,do_ske_json,yunlianpai0001_png,re_hover_ske_json,re_hover_tex_json,re_hover_tex_png,re_ske_json,re_tex_json,re_tex_png,mi_hover_ske_json,mi_hover_tex_json,mi_hover_tex_png,mi_ske_json,mi_tex_json,mi_tex_png,flowers_ske_json,yinjie1_png,btn0001_png",
+			"keys": "yunlianpai0001_png,flowers_ske_json,yinjie1_png,btn0001_png,re1_ske_json,re1_tex_png,re_tex_png,mi1_tex_png,mi1_ske_json,mi_tex_json,do_ske_json,do_tex_json,do_tex_png,do1_ske_json,do1_tex_json,do1_tex_png,mi_ske_json,mi_tex_png,mi1_tex_json,re_ske_json,re_tex_json,re1_tex_json",
 			"name": "lesson052"
 		},
 		{
@@ -173,99 +173,9 @@
 			"name": "yunlianpai0001_png"
 		},
 		{
-			"url": "assets/052/do/do_tex.png",
-			"type": "image",
-			"name": "do_tex_png"
-		},
-		{
-			"url": "assets/052/do_hover/do_hover_tex.png",
-			"type": "image",
-			"name": "do_hover_tex_png"
-		},
-		{
-			"url": "assets/052/mi_hover/mi_hover_tex.png",
-			"type": "image",
-			"name": "mi_hover_tex_png"
-		},
-		{
-			"url": "assets/052/mi/mi_tex.png",
-			"type": "image",
-			"name": "mi_tex_png"
-		},
-		{
-			"url": "assets/052/re/re_tex.png",
-			"type": "image",
-			"name": "re_tex_png"
-		},
-		{
-			"url": "assets/052/re_hover/re_hover_tex.png",
-			"type": "image",
-			"name": "re_hover_tex_png"
-		},
-		{
-			"url": "assets/052/do/do_tex.json",
-			"type": "json",
-			"name": "do_tex_json"
-		},
-		{
-			"url": "assets/052/do/do_ske.json",
-			"type": "json",
-			"name": "do_ske_json"
-		},
-		{
 			"url": "assets/052/flowers/flowers_ske.json",
 			"type": "json",
 			"name": "flowers_ske_json"
-		},
-		{
-			"url": "assets/052/do_hover/do_hover_tex.json",
-			"type": "json",
-			"name": "do_hover_tex_json"
-		},
-		{
-			"url": "assets/052/mi_hover/mi_hover_ske.json",
-			"type": "json",
-			"name": "mi_hover_ske_json"
-		},
-		{
-			"url": "assets/052/mi_hover/mi_hover_tex.json",
-			"type": "json",
-			"name": "mi_hover_tex_json"
-		},
-		{
-			"url": "assets/052/mi/mi_ske.json",
-			"type": "json",
-			"name": "mi_ske_json"
-		},
-		{
-			"url": "assets/052/mi/mi_tex.json",
-			"type": "json",
-			"name": "mi_tex_json"
-		},
-		{
-			"url": "assets/052/re/re_ske.json",
-			"type": "json",
-			"name": "re_ske_json"
-		},
-		{
-			"url": "assets/052/re/re_tex.json",
-			"type": "json",
-			"name": "re_tex_json"
-		},
-		{
-			"url": "assets/052/re_hover/re_hover_tex.json",
-			"type": "json",
-			"name": "re_hover_tex_json"
-		},
-		{
-			"url": "assets/052/re_hover/re_hover_ske.json",
-			"type": "json",
-			"name": "re_hover_ske_json"
-		},
-		{
-			"url": "assets/052/do_hover/do_hover_ske.json",
-			"type": "json",
-			"name": "do_hover_ske_json"
 		},
 		{
 			"url": "assets/052/yunlianpai0001.png",
@@ -273,129 +183,9 @@
 			"name": "yunlianpai00012_png"
 		},
 		{
-			"url": "assets/052/do/do_ske.json",
-			"type": "json",
-			"name": "do_ske2_json"
-		},
-		{
-			"url": "assets/052/do/do_tex.json",
-			"type": "json",
-			"name": "do_tex2_json"
-		},
-		{
-			"url": "assets/052/do/do_tex.png",
-			"type": "image",
-			"name": "do_tex2_png"
-		},
-		{
-			"url": "assets/052/do_hover/do_hover_ske.json",
-			"type": "json",
-			"name": "do_hover_ske2_json"
-		},
-		{
-			"url": "assets/052/do_hover/do_hover_tex.json",
-			"type": "json",
-			"name": "do_hover_tex2_json"
-		},
-		{
-			"url": "assets/052/do_hover/do_hover_tex.png",
-			"type": "image",
-			"name": "do_hover_tex2_png"
-		},
-		{
-			"url": "assets/052/mi/mi_ske.json",
-			"type": "json",
-			"name": "mi_ske2_json"
-		},
-		{
-			"url": "assets/052/mi/mi_tex.json",
-			"type": "json",
-			"name": "mi_tex2_json"
-		},
-		{
-			"url": "assets/052/mi/mi_tex.png",
-			"type": "image",
-			"name": "mi_tex2_png"
-		},
-		{
-			"url": "assets/052/mi_hover/mi_hover_ske.json",
-			"type": "json",
-			"name": "mi_hover_ske2_json"
-		},
-		{
-			"url": "assets/052/mi_hover/mi_hover_tex.json",
-			"type": "json",
-			"name": "mi_hover_tex2_json"
-		},
-		{
-			"url": "assets/052/mi_hover/mi_hover_tex.png",
-			"type": "image",
-			"name": "mi_hover_tex2_png"
-		},
-		{
-			"url": "assets/052/re/re_ske.json",
-			"type": "json",
-			"name": "re_ske2_json"
-		},
-		{
-			"url": "assets/052/re/re_tex.json",
-			"type": "json",
-			"name": "re_tex2_json"
-		},
-		{
-			"url": "assets/052/re/re_tex.png",
-			"type": "image",
-			"name": "re_tex2_png"
-		},
-		{
-			"url": "assets/052/re_hover/re_hover_ske.json",
-			"type": "json",
-			"name": "re_hover_ske2_json"
-		},
-		{
-			"url": "assets/052/re_hover/re_hover_tex.json",
-			"type": "json",
-			"name": "re_hover_tex2_json"
-		},
-		{
-			"url": "assets/052/re_hover/re_hover_tex.png",
-			"type": "image",
-			"name": "re_hover_tex2_png"
-		},
-		{
 			"url": "assets/052/yunlianpai0001.png",
 			"type": "image",
 			"name": "yunlianpai00013_png"
-		},
-		{
-			"url": "assets/052/do/do_ske.json",
-			"type": "json",
-			"name": "do_ske3_json"
-		},
-		{
-			"url": "assets/052/do/do_tex.json",
-			"type": "json",
-			"name": "do_tex3_json"
-		},
-		{
-			"url": "assets/052/do/do_tex.png",
-			"type": "image",
-			"name": "do_tex3_png"
-		},
-		{
-			"url": "assets/052/do_hover/do_hover_ske.json",
-			"type": "json",
-			"name": "do_hover_ske3_json"
-		},
-		{
-			"url": "assets/052/do_hover/do_hover_tex.json",
-			"type": "json",
-			"name": "do_hover_tex3_json"
-		},
-		{
-			"url": "assets/052/do_hover/do_hover_tex.png",
-			"type": "image",
-			"name": "do_hover_tex3_png"
 		},
 		{
 			"url": "assets/052/flowers/flowers_tex.json",
@@ -408,99 +198,9 @@
 			"name": "flowers_tex3_png"
 		},
 		{
-			"url": "assets/052/mi/mi_ske.json",
-			"type": "json",
-			"name": "mi_ske3_json"
-		},
-		{
-			"url": "assets/052/mi/mi_tex.json",
-			"type": "json",
-			"name": "mi_tex3_json"
-		},
-		{
-			"url": "assets/052/mi/mi_tex.png",
-			"type": "image",
-			"name": "mi_tex3_png"
-		},
-		{
-			"url": "assets/052/mi_hover/mi_hover_ske.json",
-			"type": "json",
-			"name": "mi_hover_ske3_json"
-		},
-		{
-			"url": "assets/052/mi_hover/mi_hover_tex.json",
-			"type": "json",
-			"name": "mi_hover_tex3_json"
-		},
-		{
-			"url": "assets/052/mi_hover/mi_hover_tex.png",
-			"type": "image",
-			"name": "mi_hover_tex3_png"
-		},
-		{
-			"url": "assets/052/re/re_ske.json",
-			"type": "json",
-			"name": "re_ske3_json"
-		},
-		{
-			"url": "assets/052/re/re_tex.json",
-			"type": "json",
-			"name": "re_tex3_json"
-		},
-		{
-			"url": "assets/052/re/re_tex.png",
-			"type": "image",
-			"name": "re_tex3_png"
-		},
-		{
-			"url": "assets/052/re_hover/re_hover_ske.json",
-			"type": "json",
-			"name": "re_hover_ske3_json"
-		},
-		{
-			"url": "assets/052/re_hover/re_hover_tex.json",
-			"type": "json",
-			"name": "re_hover_tex3_json"
-		},
-		{
-			"url": "assets/052/re_hover/re_hover_tex.png",
-			"type": "image",
-			"name": "re_hover_tex3_png"
-		},
-		{
 			"url": "assets/052/yunlianpai0001.png",
 			"type": "image",
 			"name": "yunlianpai00014_png"
-		},
-		{
-			"url": "assets/052/do/do_ske.json",
-			"type": "json",
-			"name": "do_ske4_json"
-		},
-		{
-			"url": "assets/052/do/do_tex.json",
-			"type": "json",
-			"name": "do_tex4_json"
-		},
-		{
-			"url": "assets/052/do/do_tex.png",
-			"type": "image",
-			"name": "do_tex4_png"
-		},
-		{
-			"url": "assets/052/do_hover/do_hover_ske.json",
-			"type": "json",
-			"name": "do_hover_ske4_json"
-		},
-		{
-			"url": "assets/052/do_hover/do_hover_tex.json",
-			"type": "json",
-			"name": "do_hover_tex4_json"
-		},
-		{
-			"url": "assets/052/do_hover/do_hover_tex.png",
-			"type": "image",
-			"name": "do_hover_tex4_png"
 		},
 		{
 			"url": "assets/052/flowers/flowers_ske.json",
@@ -516,66 +216,6 @@
 			"url": "assets/052/flowers/flowers_tex.png",
 			"type": "image",
 			"name": "flowers_tex_png"
-		},
-		{
-			"url": "assets/052/mi/mi_ske.json",
-			"type": "json",
-			"name": "mi_ske4_json"
-		},
-		{
-			"url": "assets/052/mi/mi_tex.json",
-			"type": "json",
-			"name": "mi_tex4_json"
-		},
-		{
-			"url": "assets/052/mi/mi_tex.png",
-			"type": "image",
-			"name": "mi_tex4_png"
-		},
-		{
-			"url": "assets/052/mi_hover/mi_hover_ske.json",
-			"type": "json",
-			"name": "mi_hover_ske4_json"
-		},
-		{
-			"url": "assets/052/mi_hover/mi_hover_tex.json",
-			"type": "json",
-			"name": "mi_hover_tex4_json"
-		},
-		{
-			"url": "assets/052/mi_hover/mi_hover_tex.png",
-			"type": "image",
-			"name": "mi_hover_tex4_png"
-		},
-		{
-			"url": "assets/052/re/re_ske.json",
-			"type": "json",
-			"name": "re_ske4_json"
-		},
-		{
-			"url": "assets/052/re/re_tex.json",
-			"type": "json",
-			"name": "re_tex4_json"
-		},
-		{
-			"url": "assets/052/re/re_tex.png",
-			"type": "image",
-			"name": "re_tex4_png"
-		},
-		{
-			"url": "assets/052/re_hover/re_hover_ske.json",
-			"type": "json",
-			"name": "re_hover_ske4_json"
-		},
-		{
-			"url": "assets/052/re_hover/re_hover_tex.json",
-			"type": "json",
-			"name": "re_hover_tex4_json"
-		},
-		{
-			"url": "assets/052/re_hover/re_hover_tex.png",
-			"type": "image",
-			"name": "re_hover_tex4_png"
 		},
 		{
 			"url": "assets/052/yinjie1.png",
@@ -681,6 +321,96 @@
 			"url": "assets/055/zhanlan.png",
 			"type": "image",
 			"name": "zhanlan_png"
+		},
+		{
+			"url": "assets/052/re1_ani/re1_tex.png",
+			"type": "image",
+			"name": "re1_tex_png"
+		},
+		{
+			"url": "assets/052/re1_ani/re1_ske.json",
+			"type": "json",
+			"name": "re1_ske_json"
+		},
+		{
+			"url": "assets/052/re1_ani/re1_tex.json",
+			"type": "json",
+			"name": "re1_tex_json"
+		},
+		{
+			"url": "assets/052/re_ani/re_tex.png",
+			"type": "image",
+			"name": "re_tex_png"
+		},
+		{
+			"url": "assets/052/re_ani/re_ske.json",
+			"type": "json",
+			"name": "re_ske_json"
+		},
+		{
+			"url": "assets/052/re_ani/re_tex.json",
+			"type": "json",
+			"name": "re_tex_json"
+		},
+		{
+			"url": "assets/052/mi1_ani/mi1_tex.png",
+			"type": "image",
+			"name": "mi1_tex_png"
+		},
+		{
+			"url": "assets/052/mi1_ani/mi1_ske.json",
+			"type": "json",
+			"name": "mi1_ske_json"
+		},
+		{
+			"url": "assets/052/mi1_ani/mi1_tex.json",
+			"type": "json",
+			"name": "mi1_tex_json"
+		},
+		{
+			"url": "assets/052/mi_ani/mi_tex.png",
+			"type": "image",
+			"name": "mi_tex_png"
+		},
+		{
+			"url": "assets/052/mi_ani/mi_tex.json",
+			"type": "json",
+			"name": "mi_tex_json"
+		},
+		{
+			"url": "assets/052/mi_ani/mi_ske.json",
+			"type": "json",
+			"name": "mi_ske_json"
+		},
+		{
+			"url": "assets/052/do1_ani/do1_tex.png",
+			"type": "image",
+			"name": "do1_tex_png"
+		},
+		{
+			"url": "assets/052/do1_ani/do1_ske.json",
+			"type": "json",
+			"name": "do1_ske_json"
+		},
+		{
+			"url": "assets/052/do1_ani/do1_tex.json",
+			"type": "json",
+			"name": "do1_tex_json"
+		},
+		{
+			"url": "assets/052/do_ani/do_tex.png",
+			"type": "image",
+			"name": "do_tex_png"
+		},
+		{
+			"url": "assets/052/do_ani/do_ske.json",
+			"type": "json",
+			"name": "do_ske_json"
+		},
+		{
+			"url": "assets/052/do_ani/do_tex.json",
+			"type": "json",
+			"name": "do_tex_json"
 		}
 	]
 }

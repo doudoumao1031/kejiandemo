@@ -154,14 +154,14 @@ var Scene052 = (function (_super) {
         this._text.fontFamily = "微软雅黑";
         this._text.textAlign = egret.HorizontalAlign.CENTER;
         this._text.textFlow = [
-            { text: "二、do、re、mi 的变化", style: { "size": 95, "textColor": 0xCC00FF } },
+            { text: "二、do、re、mi 的变化", style: { "size": 115, "textColor": 0xCC00FF } },
             { text: "\n" },
             { text: "\n" },
             { text: "\n" },
             { text: "\n" },
             { text: "\n" },
             { text: "\n" },
-            { text: "       我们来听听它们的声音会发生什么变化呢？", style: { "size": 55, "textColor": 0xDF6B73 } }
+            { text: "       我们来听听它们的声音会发生什么变化呢？", style: { "size": 75, "textColor": 0xDF6B73 } }
             // ,
             // {text: "小朋友们帮do、re、mi三个小动物分别找到自己的家吧。", style: {"size": 95, "textColor": 0xFF9900}}
         ];
@@ -219,8 +219,8 @@ var Scene052 = (function (_super) {
         // this._do.x = this.stage.stageWidth * .2 + this._bear.x +this._bear.width * 5 + this.stage.stageWidth * .5 * 1/3;
         this._do.x = this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 1 / 3;
         this._do.y = this.stage.stageHeight * .85;
-        this._do.scaleX = 4 * 5 / 4;
-        this._do.scaleY = 4 * 5 / 4;
+        this._do.scaleX = 4 * 3 / 4;
+        this._do.scaleY = 4 * 3 / 4;
         egret.Tween.get(this._do).to({ x: this.stage.stageWidth * .25 + (this.stage.stageWidth * .5) * 1 / 3 }, 1500).set({ x: this.stage.stageWidth * .25 + (this.stage.stageWidth * .5) * 1 / 3 });
         this._re = this.createdonghua("re");
         this._re.anchorOffsetX = this._re.width / 2;
@@ -228,8 +228,8 @@ var Scene052 = (function (_super) {
         // this._re.x = this.stage.stageWidth * .2 + this._bear.x +this._bear.width * 5 + this.stage.stageWidth * .5 * 2/3;
         this._re.x = this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 2 / 3;
         this._re.y = this.stage.stageHeight * .85;
-        this._re.scaleX = 4 * 5 / 4;
-        this._re.scaleY = 4 * 5 / 4;
+        this._re.scaleX = 4 * 3 / 4;
+        this._re.scaleY = 4 * 3 / 4;
         egret.Tween.get(this._re).to({ x: this.stage.stageWidth * .25 + (this.stage.stageWidth * .5) * 2 / 3 }, 1500).set({ x: this.stage.stageWidth * .25 + (this.stage.stageWidth * .5) * 2 / 3 });
         this._mi = this.createdonghua("mi");
         this._mi.anchorOffsetX = this._mi.width / 2;
@@ -237,8 +237,8 @@ var Scene052 = (function (_super) {
         // this._mi.x = this.stage.stageWidth * .2 + this._bear.x +this._bear.width * 5 + this.stage.stageWidth * .5 * 3/3;
         this._mi.x = this.stage.stageWidth * .35 + this.stage.stageWidth * .5 * 3 / 3;
         this._mi.y = this.stage.stageHeight * .85;
-        this._mi.scaleX = 4 * 5 / 4;
-        this._mi.scaleY = 4 * 5 / 4;
+        this._mi.scaleX = 4 * 3 / 4;
+        this._mi.scaleY = 4 * 3 / 4;
         egret.Tween.get(this._mi).to({ x: this.stage.stageWidth * .25 + (this.stage.stageWidth * .5) * 3 / 3 }, 1500).set({ x: this.stage.stageWidth * .25 + (this.stage.stageWidth * .5) * 3 / 3 });
         // this._flowers = this.createdonghua("flowers");
         // console.log(this._flowers);
@@ -350,13 +350,13 @@ var Scene052 = (function (_super) {
             var x = this._do.x;
             var y = this._do.y;
             this.removeChild(this._do);
-            this._do = this.createdonghua("do_hover");
+            this._do = this.createdonghua("do1");
             this._do.anchorOffsetX = this._do.width * .45;
             this._do.anchorOffsetY = this._do.height / 2;
             this._do.x = x;
             this._do.y = y;
-            this._do.scaleX = 4 * 5 / 4;
-            this._do.scaleY = 4 * 5 / 4;
+            this._do.scaleX = 4 * 3 / 4;
+            this._do.scaleY = 4 * 3 / 4;
             this.addChild(this._do);
         }
         else {
@@ -368,21 +368,21 @@ var Scene052 = (function (_super) {
             this._do.anchorOffsetY = this._do.height / 2;
             this._do.x = x;
             this._do.y = y;
-            this._do.scaleX = 4 * 5 / 4;
-            this._do.scaleY = 4 * 5 / 4;
+            this._do.scaleX = 4 * 3 / 4;
+            this._do.scaleY = 4 * 3 / 4;
             this.addChild(this._do);
         }
         if (reResult && this._re.parent) {
             var x = this._re.x;
             var y = this._re.y;
             this.removeChild(this._re);
-            this._re = this.createdonghua("re_hover");
+            this._re = this.createdonghua("re1");
             this._re.anchorOffsetX = this._re.width * .38;
             this._re.anchorOffsetY = this._re.height / 2;
             this._re.x = x;
             this._re.y = y;
-            this._re.scaleX = 4 * 5 / 4;
-            this._re.scaleY = 4 * 5 / 4;
+            this._re.scaleX = 4 * 3 / 4;
+            this._re.scaleY = 4 * 3 / 4;
             this.addChild(this._re);
         }
         else {
@@ -394,21 +394,21 @@ var Scene052 = (function (_super) {
             this._re.anchorOffsetY = this._re.height / 2;
             this._re.x = x;
             this._re.y = y;
-            this._re.scaleX = 4 * 5 / 4;
-            this._re.scaleY = 4 * 5 / 4;
+            this._re.scaleX = 4 * 3 / 4;
+            this._re.scaleY = 4 * 3 / 4;
             this.addChild(this._re);
         }
         if (miResult && this._mi.parent) {
             var x = this._mi.x;
             var y = this._mi.y;
             this.removeChild(this._mi);
-            this._mi = this.createdonghua("mi_hover");
+            this._mi = this.createdonghua("mi1");
             this._mi.anchorOffsetX = this._mi.width * .2;
             this._mi.anchorOffsetY = this._mi.height / 2;
             this._mi.x = x;
             this._mi.y = y;
-            this._mi.scaleX = 4 * 5 / 4;
-            this._mi.scaleY = 4 * 5 / 4;
+            this._mi.scaleX = 4 * 3 / 4;
+            this._mi.scaleY = 4 * 3 / 4;
             this.addChild(this._mi);
         }
         else {
@@ -420,8 +420,8 @@ var Scene052 = (function (_super) {
             this._mi.anchorOffsetY = this._mi.height / 2;
             this._mi.x = x;
             this._mi.y = y;
-            this._mi.scaleX = 4 * 5 / 4;
-            this._mi.scaleY = 4 * 5 / 4;
+            this._mi.scaleX = 4 * 3 / 4;
+            this._mi.scaleY = 4 * 3 / 4;
             this.addChild(this._mi);
         }
         //     /// 小圆点同步手指位置

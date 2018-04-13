@@ -56,9 +56,9 @@ class StartScene extends CommonScene{
 			}
 			this._bear = this.createdonghua("bearmove");
 			this._bear.x = this.stage.stageWidth / 3;
-			this._bear.y = this.stage.stageHeight * .8;
-			this._bear.scaleX = 4 * 5/4;
-			this._bear.scaleY = 4 * 5/4;
+			this._bear.y = this.stage.stageHeight * .75;
+			this._bear.scaleX = 4 * 7/4;
+			this._bear.scaleY = 4 * 7/4;
 			egret.Tween.get( this._bear ).to( {x:this.stage.stageWidth}, 3000 ).call(()=>{
 				this.removeChild(this._bear);
 				SceneController.jumpr(Scene);
@@ -129,8 +129,8 @@ class StartScene extends CommonScene{
 		// this._zuiba.scaleX = this._zuiba.scaleY = 3;
 
 		this._bear = this.createdonghua("bearmove");
-		this._bear.scaleX = 4 * 5/4;
-		this._bear.scaleY = 4 * 5/4;
+		this._bear.scaleX = 4 * 7/4;
+		this._bear.scaleY = 4 * 7/4;
 		// this._bear.scaleX = this.stage.stageWidth / this._bear.width * .14;
 		// this._bear.scaleY = this._bear.scaleX * 1.05;
 		this._bear.x = 0 - this._bear.width/2;
@@ -138,8 +138,8 @@ class StartScene extends CommonScene{
 		egret.Tween.get( this._bear ).to( {x:this.stage.stageWidth * .33}, 1500 ).call(()=>{
 			this.removeChild(this._bear);
 			this._bear = this.createdonghua("bear");
-			this._bear.scaleX = 2 * 5/4;
-			this._bear.scaleY = 2 * 5/4;
+			this._bear.scaleX = 2 * 7/4;
+			this._bear.scaleY = 2 * 7/4;
 			// this._bear.scaleX = this.stage.stageWidth / this._bear.width * .20;
 			// this._bear.scaleY = this._bear.scaleX * 1.05;
 			this._bear.x = this.stage.stageWidth * .33;
@@ -149,9 +149,9 @@ class StartScene extends CommonScene{
 			this.addChild(this._bear);
 			// 走完后添加嘴巴
 			this._zuiba = this.createdonghua("zuiba");
-			this._zuiba.x = this._bear.x - this._zuiba.width * 3;
+			this._zuiba.x = this._bear.x - this._zuiba.width * 5;
 			this._zuiba.y = this._bear.y - this._zuiba.height * .8;
-			this._zuiba.scaleX = this._zuiba.scaleY = 3;
+			this._zuiba.scaleX = this._zuiba.scaleY = 4;
 		});
 
 		this.addjiaoyin(); // 该方法依赖于 this._bear所以需要放在后面
@@ -216,9 +216,9 @@ class StartScene extends CommonScene{
 	}
 	private getjiaoyin(distance:number,name:string,sideleft:boolean){
 		let getjiaoyin:egret.Bitmap = GameUtil.createBitmapByName(name);
-		getjiaoyin.y = this.stage.stageHeight * .8 + this._bear.height/2 + (sideleft ? -getjiaoyin.height : getjiaoyin.height);
-		getjiaoyin.x = this.stage.stageWidth * distance - this._bear.width/2; 
-		getjiaoyin.scaleX = getjiaoyin.scaleY = 2;
+		getjiaoyin.y = this.stage.stageHeight * .85 + this._bear.height/2 + (sideleft ? -getjiaoyin.height : getjiaoyin.height);
+		getjiaoyin.x = this.stage.stageWidth * distance - this._bear.width * 3/4; 
+		getjiaoyin.scaleX = getjiaoyin.scaleY = 3;
 		return getjiaoyin;
 	}
 
