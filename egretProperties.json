@@ -23,6 +23,10 @@
     },
     {
       "name": "dragonBones"
+    },
+    {
+      "name": "mouse",
+      "path": "../libsrc"
     }
   ]
 }

@@ -161,7 +161,7 @@ class StartScene extends CommonScene{
 		
 
 		
-
+		egret.stopTick(this.onTicker,this);
 		egret.startTick(this.onTicker, this);
 		// 需要注意的是，startTick函数的参数，第一个参数即它的回调函数，要求有返回值，如果返回为true将在回调函数执行完成之后立即重绘，为false则不会重绘。另一个参数是this对象，通常传入this即可。
 

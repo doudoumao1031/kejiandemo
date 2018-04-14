@@ -67,10 +67,9 @@ var Scene051 = (function (_super) {
     Scene051.prototype.initView = function () {
         var _this = this;
         var currentscene = this;
-        mouse.enable(this.stage);
         // 音效
-        this._sound = RES.getRes("streamsound 0_mp3");
-        this._soundchannel = this._sound.play(5, 1);
+        var sound = RES.getRes("streamsound 0_mp3");
+        this._soundchannel = sound.play(5, 1);
         this.addEventListener(egret.Event.ENTER_FRAME, this.onTimeUpdate, this); // 通过这个来监听音频 进入下一帧的回调
         // let bg:egret.Bitmap = GameUtil.createBitmapByName("bg_png");
         var bg = GameUtil.createBitmapByName("sky_png");
@@ -143,19 +142,13 @@ var Scene051 = (function (_super) {
         // this._text.textFlow = (new egret.HtmlTextParser).parser(str);
         // this.addChild(this._text);
         // 乐谱
-        // this._yuepu = GameUtil.createBitmapByName("yinjie1_png"); 
-        this._yuepu = GameUtil.createBitmapByName("yuepu11_png");
+        this._yuepu = GameUtil.createBitmapByName("yinjie1_png");
         this.addChild(this._yuepu);
         this._yuepu.anchorOffsetX = this._yuepu.width / 2;
         this._yuepu.anchorOffsetY = this._yuepu.height / 2;
         this._yuepu.x = this.stage.stageWidth / 2;
         this._yuepu.y = this.stage.$stageHeight * .35;
         this._yuepu.scaleX = this._yuepu.scaleY = this.stage.stageWidth / this._yuepu.width * .5;
-        this._yinfu_do = GameUtil.createBitmapByName("yinfu1_png");
-        this._yinfu_do.x = this._yuepu.x - this._yuepu.width * .62;
-        this._yinfu_do.y = this._yuepu.y + this._yuepu.height * .895;
-        this._yinfu_do.scaleX = this._yinfu_do.scaleY = 2.2;
-        this.addChild(this._yinfu_do);
         caodi.y = this.stage.stageHeight * .5;
         caodi.scaleX = this.stage.stageWidth / caodi.width * 1.1;
         caodi.scaleY = this.stage.stageHeight / caodi.height * 1;
@@ -211,73 +204,51 @@ var Scene051 = (function (_super) {
         this._flowers.scaleX = this.stage.stageWidth / this._flowers.width * 1.1;
         this._flowers.scaleY = this.stage.stageHeight / this._flowers.height * .55;
         // console.log(this._flowers.scaleX ,this._flowers.scaleY );
-        // let button:egret.Bitmap = GameUtil.createBitmapByName("btn0001_png"); 
-        var button = this.createdonghua("buttonright");
+        var button = GameUtil.createBitmapByName("btn0001_png");
+        this.addChild(button);
         button.anchorOffsetX = button.width / 2;
         button.anchorOffsetY = button.height / 2;
-        button.x = this.stage.stageWidth * .95;
-        button.y = this.stage.stageHeight * .9;
+        button.x = this.stage.stageWidth * .9;
+        button.y = this.stage.stageHeight * .8;
         button.touchEnabled = true;
         button.scaleX = button.scaleY = this.stage.stageWidth / button.width * .1;
-        this._btnright = button;
-        this.addChild(this._btnright);
-        mouse.setMouseMoveEnabled(true);
-        mouse.setButtonMode(this._btnright, this._do);
-        // button.addEventListener(mouse.MouseEvent.MOUSE_MOVE, ()=>{
-        // 	console.log('mouse move');
-        // 	this.removeChild(this._btnright);
-        // 	this._btnright = this.createdonghua("buttonright_hover");
-        // 	this._btnright.anchorOffsetX = this._btnright.width/2;
-        // 	this._btnright.anchorOffsetY = this._btnright.height/2;
-        // 	this._btnright.x = this.stage.stageWidth * .9;
-        // 	this._btnright.y = this.stage.stageHeight * .8;
-        // 	this._btnright.touchEnabled = true;
-        // 	this._btnright.scaleX = this._btnright.scaleY = this.stage.stageWidth / this._btnright.width * .1;
-        // 	this.addChild(this._btnright);
-        // }, this);
-        // button.addEventListener(mouse.MouseEvent.ROLL_OVER, ()=>{
-        // 	console.log('btnright mouseover');
-        // 	this.removeChild(this._btnright);
-        // 	this._btnright = this.createdonghua("buttonright_hover");
-        // 	this._btnright.anchorOffsetX = this._btnright.width/2;
-        // 	this._btnright.anchorOffsetY = this._btnright.height/2;
-        // 	this._btnright.x = this.stage.stageWidth * .9;
-        // 	this._btnright.y = this.stage.stageHeight * .8;
-        // 	this._btnright.touchEnabled = true;
-        // 	this._btnright.scaleX = this._btnright.scaleY = this.stage.stageWidth / this._btnright.width * .1;
-        // 	currentscene.addChild(this._btnright);
-        // 	this._btnright.addEventListener(mouse.MouseEvent.ROLL_OUT, ()=>{
-        // 		console.log('btnright mouseout');
-        // 		this.removeChild(this._btnright);
-        // 		this._btnright = this.createdonghua("buttonright");
-        // 		this._btnright.anchorOffsetX = this._btnright.width/2;
-        // 		this._btnright.anchorOffsetY = this._btnright.height/2;
-        // 		this._btnright.x = this.stage.stageWidth * .9;
-        // 		this._btnright.y = this.stage.stageHeight * .8;
-        // 		this._btnright.touchEnabled = true;
-        // 		this._btnright.scaleX = this._btnright.scaleY = this.stage.stageWidth / this._btnright.width * .1;
-        // 		currentscene.addChild(this._btnright);
-        // 	}, this);
-        // }, this);
-        // button.addEventListener(mouse.MouseEvent.MOUSE_OUT, ()=>{
-        // 	console.log('btnright mouseout');
-        // 	this.removeChild(this._btnright);
-        // 	this._btnright = this.createdonghua("buttonright");
-        // 	this._btnright.anchorOffsetX = this._btnright.width/2;
-        // 	this._btnright.anchorOffsetY = this._btnright.height/2;
-        // 	this._btnright.x = this.stage.stageWidth * .9;
-        // 	this._btnright.y = this.stage.stageHeight * .8;
-        // 	this._btnright.touchEnabled = true;
-        // 	this._btnright.scaleX = this._btnright.scaleY = this.stage.stageWidth / this._btnright.width * .1;
-        // 	currentscene.addChild(this._btnright);
-        // }, this);
-        this.stage.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.touchHandler, this);
+        button.addEventListener(egret.TouchEvent.TOUCH_MOVE, function () {
+            console.log('move chufa');
+        }, this);
+        button.addEventListener(egret.TouchEvent.TOUCH_BEGIN, function () {
+            console.log('touch begin');
+        }, this);
+        // button.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
+        // 	console.log("btn tap chuf");
+        // },this);
+        // this._btnright = GameUtil.createBitmapByName("btn0001_png"); 
+        // // this._btnright = this.createdonghua("buttonright");
+        // this._btnright.x = this.stage.stageWidth * .9;
+        // this._btnright.y = this.stage.stageHeight * .8;
+        // this._btnright.scaleX = this._btnright.scaleY = this.stage.stageWidth / this._btnright.width * .1;
+        // this.addChild(this._btnright);
+        // this._btnright.addEventListener(egret.TouchEvent.TOUCH_TAP,()=>{
+        // 	console.log("btn tap chuf");
+        // },this);
+        // this._btnright.addEventListener(egret.TouchEvent.TOUCH_BEGIN,()=>{
+        // 	console.log("btn begin chuf");
+        // },this);
+        // this._btnright.addEventListener(egret.TouchEvent.TOUCH_MOVE,()=>{
+        // 	console.log('btn move chufa');
+        // 	currentscene._btnright.scaleX = currentscene._btnright.scaleY = currentscene.stage.stageWidth / currentscene._btnright.width * .15;
+        // 	currentscene._btnright.rotation += 5;
+        // },this);
+        // this._btnright.addEventListener(egret.TouchEvent.TOUCH_END,()=>{
+        // 	console.log('btn end chufa');
+        // 	currentscene._btnright.scaleX = currentscene._btnright.scaleY = currentscene.stage.stageWidth / currentscene._btnright.width * .1;
+        // 	// this._btnright.rotation += 5;
+        // },this);
+        // this.stage.addEventListener( egret.TouchEvent.TOUCH_BEGIN, this.touchHandler, this );
         // let bear = this.createdonghua("bear");
         // bear.x = this.stage.stageWidth / 3;
         // bear.y = this.stage.stageHeight * .8;
         // bear.scaleX = 2;
         // bear.scaleY = 2;
-        // egret.stopTick(this.onTicker,this);
         // egret.startTick(this.onTicker, this);
         // 需要注意的是，startTick函数的参数，第一个参数即它的回调函数，要求有返回值，如果返回为true将在回调函数执行完成之后立即重绘，为false则不会重绘。另一个参数是this对象，通常传入this即可。
     };
@@ -316,14 +287,6 @@ var Scene051 = (function (_super) {
         //         break;
         // }
     };
-    // 封装的播放方法
-    Scene051.prototype.soundplay = function (src, times) {
-        if (this._soundchannel) {
-            this._soundchannel.stop();
-        }
-        this._sound = RES.getRes(src);
-        this._soundchannel = this._sound.play(0, times);
-    };
     Scene051.prototype.checkCollision = function (stageX, stageY) {
         var Scene = this;
         if (this._btnright.hitTestPoint(stageX, stageY)) {
@@ -356,12 +319,6 @@ var Scene051 = (function (_super) {
             this._do.scaleX = 4 * 3 / 4;
             this._do.scaleY = 4 * 3 / 4;
             this.addChild(this._do);
-            this.soundplay("do_mp3", 3);
-            this._yinfu_active = GameUtil.createBitmapByName("yinfu1_active_png");
-            this._yinfu_active.x = this._yuepu.x - this._yuepu.width * .62;
-            this._yinfu_active.y = this._yuepu.y + this._yuepu.height * .895;
-            this._yinfu_active.scaleX = this._yinfu_active.scaleY = 2.2;
-            this.addChild(this._yinfu_active);
         }
         else {
             var x = this._do.x;
@@ -388,7 +345,6 @@ var Scene051 = (function (_super) {
             this._re.scaleX = 4 * 3 / 4;
             this._re.scaleY = 4 * 3 / 4;
             this.addChild(this._re);
-            this.soundplay("re_mp3", 3);
         }
         else {
             var x = this._re.x;
@@ -415,7 +371,6 @@ var Scene051 = (function (_super) {
             this._mi.scaleX = 4 * 3 / 4;
             this._mi.scaleY = 4 * 3 / 4;
             this.addChild(this._mi);
-            this.soundplay("mi_mp3", 3);
         }
         else {
             var x = this._mi.x;

@@ -60,7 +60,9 @@ class SceneController {
 		// }
 		// 加入开始场景
 		this.instance.startScene = new StartScene();
+		// this.instance.Scene051 = new Scene051();
 		stage.addChild( this.instance.startScene );
+		// stage.addChild( this.instance.Scene051 );
 		// stage.addChild( this.instance.Scene052 );
 		// stage.addChild(this.instance.Scene054);
 	}

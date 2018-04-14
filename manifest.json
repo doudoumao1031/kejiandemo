@@ -6,7 +6,8 @@
 		"libs/modules/tween/tween.js",
 		"libs/modules/assetsmanager/assetsmanager.js",
 		"libs/modules/promise/promise.js",
-		"libs/modules/dragonBones/dragonBones.js"
+		"libs/modules/dragonBones/dragonBones.js",
+		"libs/modules/mouse/mouse.js"
 	],
 	"game": [
 		"bin-debug/game/CommonScene.js",
@@ -17,7 +18,7 @@
 		"bin-debug/game/demo.js",
 		"bin-debug/game/Scene051.js",
 		"bin-debug/game/Scene052.js",
-		"bin-debug/gameObject/Player.js",
+		"bin-debug/Main.js",
 		"bin-debug/game/Scene054.js",
 		"bin-debug/game/SceneController.js",
 		"bin-debug/game/StartScene.js",
@@ -25,6 +26,6 @@
 		"bin-debug/gameObject/Barrier.js",
 		"bin-debug/gameObject/Egg.js",
 		"bin-debug/Platform.js",
-		"bin-debug/Main.js"
+		"bin-debug/gameObject/Player.js"
 	]
 }

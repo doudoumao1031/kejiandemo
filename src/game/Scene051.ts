@@ -33,6 +33,8 @@ class Scene051 extends CommonScene{
     //     }
     // }
 
+	private _sound;
+
 	private _bear;
 	private _zuiba;
 	private _soundchannel:egret.SoundChannel;
@@ -45,12 +47,17 @@ class Scene051 extends CommonScene{
 	private _btnright;
 	private _yun2;
 	private _caodi;
+	private _yinfu_active;
+	private _yinfu_do;
+	private _yinfu_re;
+	private _yinfu_mi;
 
 	private initView(){
-
+		let currentscene = this;
+		mouse.enable(this.stage);
 		// 音效
-		let sound:egret.Sound = RES.getRes("streamsound 0_mp3");
-		this._soundchannel = sound.play(5,1);
+		this._sound = RES.getRes("streamsound 0_mp3");
+		this._soundchannel = this._sound.play(5,1);
 		this.addEventListener(egret.Event.ENTER_FRAME, this.onTimeUpdate, this); // 通过这个来监听音频 进入下一帧的回调
 
 		// let bg:egret.Bitmap = GameUtil.createBitmapByName("bg_png");
@@ -131,13 +138,20 @@ class Scene051 extends CommonScene{
 		// this.addChild(this._text);
 
 		// 乐谱
-		this._yuepu = GameUtil.createBitmapByName("yinjie1_png"); 
+		// this._yuepu = GameUtil.createBitmapByName("yinjie1_png"); 
+		this._yuepu = GameUtil.createBitmapByName("yuepu11_png");
 		this.addChild(this._yuepu);
 		this._yuepu.anchorOffsetX = this._yuepu.width / 2;
 		this._yuepu.anchorOffsetY = this._yuepu.height / 2;
 		this._yuepu.x = this.stage.stageWidth / 2;
 		this._yuepu.y = this.stage.$stageHeight * .35;
 		this._yuepu.scaleX = this._yuepu.scaleY = this.stage.stageWidth / this._yuepu.width * .5;
+
+		this._yinfu_do = GameUtil.createBitmapByName("yinfu1_png"); 
+		this._yinfu_do.x = this._yuepu.x - this._yuepu.width * .62;
+		this._yinfu_do.y = this._yuepu.y + this._yuepu.height * .895;
+		this._yinfu_do.scaleX = this._yinfu_do.scaleY = 2.2;
+		this.addChild(this._yinfu_do);
 
 
 
@@ -202,11 +216,69 @@ class Scene051 extends CommonScene{
 		this._flowers.scaleY = this.stage.stageHeight / this._flowers.height * .55;
 		// console.log(this._flowers.scaleX ,this._flowers.scaleY );
 
-		this._btnright = GameUtil.createBitmapByName("btn0001_png"); 
-		this._btnright.x = this.stage.stageWidth * .85;
-		this._btnright.y = this.stage.stageHeight * .75;
-		this._btnright.scaleX = this._btnright.scaleY = this.stage.stageWidth / this._btnright.width * .1;
+		// let button:egret.Bitmap = GameUtil.createBitmapByName("btn0001_png"); 
+		let button = this.createdonghua("buttonright");
+		button.anchorOffsetX = button.width/2;
+		button.anchorOffsetY = button.height/2;
+		button.x = this.stage.stageWidth * .95;
+		button.y = this.stage.stageHeight * .9;
+		button.touchEnabled = true;
+		button.scaleX = button.scaleY = this.stage.stageWidth / button.width * .1;
+		this._btnright = button;
 		this.addChild(this._btnright);
+		mouse.setMouseMoveEnabled(true);
+		mouse.setButtonMode(this._btnright, this._do);
+		// button.addEventListener(mouse.MouseEvent.MOUSE_MOVE, ()=>{
+		// 	console.log('mouse move');
+		// 	this.removeChild(this._btnright);
+		// 	this._btnright = this.createdonghua("buttonright_hover");
+		// 	this._btnright.anchorOffsetX = this._btnright.width/2;
+		// 	this._btnright.anchorOffsetY = this._btnright.height/2;
+		// 	this._btnright.x = this.stage.stageWidth * .9;
+		// 	this._btnright.y = this.stage.stageHeight * .8;
+		// 	this._btnright.touchEnabled = true;
+		// 	this._btnright.scaleX = this._btnright.scaleY = this.stage.stageWidth / this._btnright.width * .1;
+		// 	this.addChild(this._btnright);
+		// }, this);
+
+		// button.addEventListener(mouse.MouseEvent.ROLL_OVER, ()=>{
+		// 	console.log('btnright mouseover');
+		// 	this.removeChild(this._btnright);
+		// 	this._btnright = this.createdonghua("buttonright_hover");
+		// 	this._btnright.anchorOffsetX = this._btnright.width/2;
+		// 	this._btnright.anchorOffsetY = this._btnright.height/2;
+		// 	this._btnright.x = this.stage.stageWidth * .9;
+		// 	this._btnright.y = this.stage.stageHeight * .8;
+		// 	this._btnright.touchEnabled = true;
+		// 	this._btnright.scaleX = this._btnright.scaleY = this.stage.stageWidth / this._btnright.width * .1;
+		// 	currentscene.addChild(this._btnright);
+		// 	this._btnright.addEventListener(mouse.MouseEvent.ROLL_OUT, ()=>{
+		// 		console.log('btnright mouseout');
+		// 		this.removeChild(this._btnright);
+		// 		this._btnright = this.createdonghua("buttonright");
+		// 		this._btnright.anchorOffsetX = this._btnright.width/2;
+		// 		this._btnright.anchorOffsetY = this._btnright.height/2;
+		// 		this._btnright.x = this.stage.stageWidth * .9;
+		// 		this._btnright.y = this.stage.stageHeight * .8;
+		// 		this._btnright.touchEnabled = true;
+		// 		this._btnright.scaleX = this._btnright.scaleY = this.stage.stageWidth / this._btnright.width * .1;
+		// 		currentscene.addChild(this._btnright);
+		// 	}, this);
+		// }, this);
+		
+		// button.addEventListener(mouse.MouseEvent.MOUSE_OUT, ()=>{
+		// 	console.log('btnright mouseout');
+		// 	this.removeChild(this._btnright);
+		// 	this._btnright = this.createdonghua("buttonright");
+		// 	this._btnright.anchorOffsetX = this._btnright.width/2;
+		// 	this._btnright.anchorOffsetY = this._btnright.height/2;
+		// 	this._btnright.x = this.stage.stageWidth * .9;
+		// 	this._btnright.y = this.stage.stageHeight * .8;
+		// 	this._btnright.touchEnabled = true;
+		// 	this._btnright.scaleX = this._btnright.scaleY = this.stage.stageWidth / this._btnright.width * .1;
+		// 	currentscene.addChild(this._btnright);
+		// }, this);
+	
 
 		this.stage.addEventListener( egret.TouchEvent.TOUCH_BEGIN, this.touchHandler, this );
 
@@ -217,6 +289,7 @@ class Scene051 extends CommonScene{
 		// bear.scaleX = 2;
 		// bear.scaleY = 2;
 
+		// egret.stopTick(this.onTicker,this);
 		// egret.startTick(this.onTicker, this);
 		// 需要注意的是，startTick函数的参数，第一个参数即它的回调函数，要求有返回值，如果返回为true将在回调函数执行完成之后立即重绘，为false则不会重绘。另一个参数是this对象，通常传入this即可。
 
@@ -256,6 +329,14 @@ class Scene051 extends CommonScene{
         //         break;
         // }
     }
+	// 封装的播放方法
+	private soundplay(src:string,times:number):void{
+		if(this._soundchannel){
+			this._soundchannel.stop();
+		}
+		this._sound = RES.getRes(src);
+		this._soundchannel = this._sound.play(0,times);
+	}
 	private checkCollision( stageX:number, stageY:number ):void {
 		let Scene = this;
 		if(this._btnright.hitTestPoint( stageX, stageY )){
@@ -293,6 +374,12 @@ class Scene051 extends CommonScene{
 			this._do.scaleX = 4 * 3/4;
 			this._do.scaleY = 4 * 3/4;
 			this.addChild(this._do)
+			this.soundplay("do_mp3",3);
+			this._yinfu_active = GameUtil.createBitmapByName("yinfu1_active_png"); 
+			this._yinfu_active.x = this._yuepu.x - this._yuepu.width * .62;
+			this._yinfu_active.y = this._yuepu.y + this._yuepu.height * .895;
+			this._yinfu_active.scaleX = this._yinfu_active.scaleY = 2.2;
+			this.addChild(this._yinfu_active);
 		}else{
 			let x = this._do.x;
 			let y = this._do.y;
@@ -319,6 +406,7 @@ class Scene051 extends CommonScene{
 			this._re.scaleX = 4 * 3/4;
 			this._re.scaleY = 4 * 3/4;
 			this.addChild(this._re)
+			this.soundplay("re_mp3",3);
 		}else{
 			let x = this._re.x;
 			let y = this._re.y;
@@ -345,6 +433,7 @@ class Scene051 extends CommonScene{
 			this._mi.scaleX = 4 * 3/4;
 			this._mi.scaleY = 4 * 3/4;
 			this.addChild(this._mi)
+			this.soundplay("mi_mp3",3);
 		}else{
 			let x = this._mi.x;
 			let y = this._mi.y;

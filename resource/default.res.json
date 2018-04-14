@@ -1,11 +1,11 @@
 {
 	"groups": [
 		{
-			"keys": "config_json,bear_ske_json,bear_tex_png,caodi_tex_json,caodi_ske_json,caodi_tex_png,bear_tex_json,button0001_png,bearmove_ske_json,bearmove_tex_png,dashu_tex_json,dashu_ske_json,dashu_tex_png,bearmove_tex_json,sky_png,yun_png,mogu_tex_png,mogu_tex_json,mogu_ske_json,cao051_png,streamsound 0_mp3,zuiba_tex_png,zuiba_tex_json,zuiba_ske_json,jiaoyinleft_png,jiaoyinright_png,yunlianpai00012_png,yunlianpai00013_png,flowers_tex3_json,flowers_tex3_png,yunlianpai00014_png,flowers_ske2_json,flowers_tex_json,flowers_tex_png",
+			"keys": "config_json,bear_ske_json,bear_tex_png,caodi_tex_json,caodi_ske_json,caodi_tex_png,bear_tex_json,button0001_png,bearmove_ske_json,bearmove_tex_png,dashu_tex_json,dashu_ske_json,dashu_tex_png,bearmove_tex_json,sky_png,yun_png,mogu_tex_png,mogu_tex_json,mogu_ske_json,cao051_png,streamsound 0_mp3,zuiba_tex_png,zuiba_tex_json,zuiba_ske_json,jiaoyinleft_png,jiaoyinright_png,yunlianpai00012_png,yunlianpai00013_png,flowers_tex3_json,flowers_tex3_png,yunlianpai00014_png,flowers_ske2_json,flowers_tex_json,flowers_tex_png,buttonright_hover_tex_png,buttonright_hover_ske_json,buttonleft_hover_tex_json,buttonleft_hover_ske_json,buttonleft_hover_tex_png,buttonright_hover_tex_json,do_mp3,mi_mp3,re_mp3,yinfu1_active_png,yinfu2_active_png,yinfu1_png,yinfu2_03_png,yuepu11_png",
 			"name": "preload"
 		},
 		{
-			"keys": "yunlianpai0001_png,flowers_ske_json,yinjie1_png,btn0001_png,re1_ske_json,re1_tex_png,re_tex_png,mi1_tex_png,mi1_ske_json,mi_tex_json,do_ske_json,do_tex_json,do_tex_png,do1_ske_json,do1_tex_json,do1_tex_png,mi_ske_json,mi_tex_png,mi1_tex_json,re_ske_json,re_tex_json,re1_tex_json",
+			"keys": "yunlianpai0001_png,flowers_ske_json,yinjie1_png,btn0001_png,re1_ske_json,re1_tex_png,re_tex_png,mi1_tex_png,mi1_ske_json,mi_tex_json,do_ske_json,do_tex_json,do_tex_png,do1_ske_json,do1_tex_json,do1_tex_png,mi_ske_json,mi_tex_png,mi1_tex_json,re_ske_json,re_tex_json,re1_tex_json,buttonright_tex_png,buttonright_tex_json,buttonright_ske_json",
 			"name": "lesson052"
 		},
 		{
@@ -411,6 +411,91 @@
 			"url": "assets/052/do_ani/do_tex.json",
 			"type": "json",
 			"name": "do_tex_json"
+		},
+		{
+			"url": "assets/052/buttonright/buttonright_tex.png",
+			"type": "image",
+			"name": "buttonright_tex_png"
+		},
+		{
+			"url": "assets/052/buttonright/buttonright_ske.json",
+			"type": "json",
+			"name": "buttonright_ske_json"
+		},
+		{
+			"url": "assets/052/buttonright/buttonright_tex.json",
+			"type": "json",
+			"name": "buttonright_tex_json"
+		},
+		{
+			"url": "assets/052/buttonright_hover_ani/buttonright_hover_tex.png",
+			"type": "image",
+			"name": "buttonright_hover_tex_png"
+		},
+		{
+			"url": "assets/052/buttonright_hover_ani/buttonright_hover_ske.json",
+			"type": "json",
+			"name": "buttonright_hover_ske_json"
+		},
+		{
+			"url": "assets/052/buttonright_hover_ani/buttonright_hover_tex.json",
+			"type": "json",
+			"name": "buttonright_hover_tex_json"
+		},
+		{
+			"url": "assets/052/buttonleft_hover_ani/buttonleft_hover_tex.png",
+			"type": "image",
+			"name": "buttonleft_hover_tex_png"
+		},
+		{
+			"url": "assets/052/buttonleft_hover_ani/buttonleft_hover_ske.json",
+			"type": "json",
+			"name": "buttonleft_hover_ske_json"
+		},
+		{
+			"url": "assets/052/buttonleft_hover_ani/buttonleft_hover_tex.json",
+			"type": "json",
+			"name": "buttonleft_hover_tex_json"
+		},
+		{
+			"url": "assets/sound/do.mp3",
+			"type": "sound",
+			"name": "do_mp3"
+		},
+		{
+			"url": "assets/sound/mi.mp3",
+			"type": "sound",
+			"name": "mi_mp3"
+		},
+		{
+			"url": "assets/sound/re.mp3",
+			"type": "sound",
+			"name": "re_mp3"
+		},
+		{
+			"url": "assets/052/yinfu2_active.png",
+			"type": "image",
+			"name": "yinfu2_active_png"
+		},
+		{
+			"url": "assets/052/yinfu1_active.png",
+			"type": "image",
+			"name": "yinfu1_active_png"
+		},
+		{
+			"url": "assets/052/yinfu1.png",
+			"type": "image",
+			"name": "yinfu1_png"
+		},
+		{
+			"url": "assets/052/yinfu2_03.png",
+			"type": "image",
+			"name": "yinfu2_03_png"
+		},
+		{
+			"url": "assets/052/yuepu11.png",
+			"type": "image",
+			"name": "yuepu11_png"
 		}
 	]
 }
